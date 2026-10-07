@@ -8,11 +8,26 @@ const EMOJI_MAP = new Map<EMOJI_KEYS, string>([
 ]);
 
 export default function Emoji() {
+    let status:EMOJI_KEYS = "sad";
+
+    function happyClick() {
+        console.log("Status:", status);
+    console.log("Happy button clicked!");
+    status = "happy";
+    console.log("Status:", status);
+}
+
   return (
-    <div className="emoji">
-        {EMOJI_MAP.get("happy")}
-        {EMOJI_MAP.get("sad")}
-        {EMOJI_MAP.get("angry")}
-    </div>
+    <>
+        <div className="emoji">
+            {EMOJI_MAP.get(status) || "unknown"}
+        </div>
+
+        <div className="acoes">
+            <button onClick={happyClick}>
+                BOTAO
+             </button>
+        </div>
+    </>
 );
 }
