@@ -2,6 +2,10 @@ import { useState } from "react";
 import "./Emoji.css";
 import Atributo from "./assets/Atributo";
 
+type AtributosProps = {
+  icone: string;
+}; 
+
 type EMOJI_KEYS = "happy" | "sad" | "angry";
 const EMOJI_MAP = new Map<EMOJI_KEYS, string>([
   ["happy", "😀"],
@@ -54,10 +58,11 @@ export default function Emoji() {
   return (
     <>
       <div className="emoji">{EMOJI_MAP.get(status) || "unknown"}</div>
-    <Atributo />
-    <Atributo />
-    <Atributo />
-    <Atributo />
+    <Atributo icone="😀"/>
+    <Atributo icone="😢"/>
+    <Atributo icone="😠"/>
+    <Atributo icone="😍"/>
+    <Atributo icone="🥳"/>
       <div className="acoes">
         <button onClick={happyClick}>happy</button>
         <button onClick={sadClick}>sad</button>
