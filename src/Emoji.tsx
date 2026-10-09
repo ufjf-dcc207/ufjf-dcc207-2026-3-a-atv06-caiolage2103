@@ -55,6 +55,9 @@ export default function Emoji() {
     <>
       <div className="emoji">{EMOJI_MAP.get(status) || "unknown"}</div>
     <Atributo />
+    <Atributo />
+    <Atributo />
+    <Atributo />
       <div className="acoes">
         <button onClick={happyClick}>happy</button>
         <button onClick={sadClick}>sad</button>

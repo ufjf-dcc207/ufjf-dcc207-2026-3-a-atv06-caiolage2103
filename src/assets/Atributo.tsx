@@ -13,7 +13,7 @@ export default function Atributo() {
   }
   return (
     <div className="atributo">
-      {valor}{"❤️".repeat(valor)}{"🤍".repeat(5-valor)}
+      {valor}{"❤️".repeat(valor)}<span className="inativo">{ "❤️".repeat(5 - valor) }</span>
         <button onClick={() => 
             setValor(valor === 5 ? 0 : valor + 1)}>+
         </button>
