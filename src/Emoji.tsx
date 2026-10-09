@@ -29,6 +29,23 @@ export default function Emoji() {
     setStatus("angry");
     console.log("Status:", status);
   }
+    function cicloClick() {
+        switch (status) {
+            case "happy":
+                setStatus("sad");
+                break;
+            case "sad":
+                setStatus("angry");
+                break;
+            case "angry":
+                setStatus("happy");
+                break;
+                default:
+                setStatus("happy");
+                break;
+        }
+    }
+
 
   console.log("DESENHANDO..");
   console.log("Status:", status);
@@ -41,6 +58,7 @@ export default function Emoji() {
         <button onClick={happyClick}>happy</button>
         <button onClick={sadClick}>sad</button>
         <button onClick={angryClick}>angry</button>
+        <button onClick={cicloClick}>ciclo</button>
       </div>
     </>
   );
