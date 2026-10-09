@@ -13,7 +13,7 @@ export default function Atributo() {
   }
   return (
     <div className="atributo">
-      {valor}{coracoes}
+      {valor}{"❤️".repeat(valor)}{"🤍".repeat(5-valor)}
         <button onClick={() => 
             setValor(valor === 5 ? 0 : valor + 1)}>+
         </button>
